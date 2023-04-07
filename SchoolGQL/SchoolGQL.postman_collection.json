@@ -1,0 +1,752 @@
+{
+	"info": {
+		"_postman_id": "5fa243cb-f46f-4d10-9881-1464635be20f",
+		"name": "SchoolGQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "School",
+			"item": [
+				{
+					"name": "GQL - Add School",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    addSchool(name: \"Name Here\"){\r\n        id\r\n        name\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - All Schools",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    findAllSchools{\r\n        name\r\n        id\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - School by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    findSchoolById(id: 0){\r\n        name\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Delete School",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    deleteSchool(id: 0)\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Add School",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"addSchool\",\r\n    \"payload\": {\r\n        \"name\": \"A New School\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - All Schools",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"query\",\r\n    \"queryName\": \"findAllSchools\",\r\n    \"payload\": {},\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - School by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"query\",\r\n    \"queryName\": \"findSchoolById\",\r\n    \"payload\": {\r\n        \"id\" : \"2\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Delete School",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"deleteSchool\",\r\n    \"payload\": {\r\n        \"id\": \"30\"\r\n    },\r\n    \"responseAttributes\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Teacher",
+			"item": [
+				{
+					"name": "GQL - Add Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    addTeacher(name: \"Teacher\", subject: \"subject\", school: 0){\r\n        name\r\n        id\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - All Teachers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    findAllTeachers{\r\n        id\r\n        name\r\n        school{\r\n            name\r\n        }\r\n        subject\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Teacher by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    findTeacherById(id: 0){\r\n        name\r\n        subject\r\n        school{\r\n            name\r\n            id\r\n        }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Update Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    updateTeacher(id: 0, name: \"name\", subject: \"subject\", schoolId: 0){\r\n        name\r\n        id\r\n        school{\r\n            name\r\n        }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Delete Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    deleteTeacher(id: 0)\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Add Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"addTeacher\",\r\n    \"payload\": {\r\n        \"name\": \"Monica Smith\",\r\n        \"subject\": \"Chemistry\",\r\n        \"school\": \"2\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\"\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - All Teachers",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"query\",\r\n    \"queryName\": \"findAllTeachers\",\r\n    \"payload\": {},\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"subject\",\r\n        \"school\",\r\n        [\r\n            \"name\",\r\n            \"id\"\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Teacher by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"query\",\r\n    \"queryName\": \"findTeacherById\",\r\n    \"payload\": {\r\n        \"id\" : \"34\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"school\",\r\n        [\r\n            \"name\"\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Update Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"updateTeacher\",\r\n    \"payload\": {\r\n        \"id\": \"36\",\r\n        \"name\": \"New Name\",\r\n        \"subject\": \"New Subject\",\r\n        \"schoolId\": \"2\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"subject\",\r\n        \"school\",\r\n        [\r\n            \"id\",\r\n            \"name\"\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Delete Teacher",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"deleteTeacher\",\r\n    \"payload\": {\r\n        \"id\": \"0\"\r\n    },\r\n    \"responseAttributes\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Student",
+			"item": [
+				{
+					"name": "GQL - Add Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    addStudent(name: \"Student\", gradeLevel: \"gradeLevel\", school: 0, teacher: 0){\r\n        name\r\n        id\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - All Students",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    findAllStudents{\r\n        id\r\n        name\r\n        school{\r\n            name\r\n        }\r\n        teacher{\r\n            name\r\n        }\r\n        gradeLevel\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Student by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "query{\r\n    findStudentById(id: 0){\r\n        name\r\n        teacher{\r\n            name\r\n            subject\r\n        }\r\n        school{\r\n            name\r\n        }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Update Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    updateStudent(id: 0, name: \"name\", gradeLevel: \"gradeLevel\", schoolId: 0, teacherId: 0){\r\n        name\r\n        id\r\n        school{\r\n            name\r\n        }\r\n        teacher{\r\n            name\r\n        }\r\n    }\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GQL - Delete Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "graphql",
+							"graphql": {
+								"query": "mutation{\r\n    deleteStudent(id: 0)\r\n}",
+								"variables": ""
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/graphql",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"graphql"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Add Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"addStudent\",\r\n    \"payload\": {\r\n        \"name\": \"Tyler Jay\",\r\n        \"gradeLevel\": \"12th\",\r\n        \"teacher\" : \"36\",\r\n        \"school\": \"2\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"gradeLevel\",\r\n        \"school\",\r\n        [\r\n            \"name\"\r\n        ],\r\n        \"teacher\",\r\n        [\r\n            \"name\",\r\n            \"subject\"\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - All Students",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"query\",\r\n    \"queryName\": \"findAllStudents\", \r\n    \"payload\": {\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"teacher\",\r\n        [\r\n            \"name\",\r\n            \"subject\",\r\n            \"school\",\r\n            [\r\n                \"name\",\r\n                \"id\"\r\n            ]\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Student by ID",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"query\",\r\n    \"queryName\": \"findStudentById\",\r\n    \"payload\": {\r\n        \"id\" : \"37\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"school\",\r\n        [\r\n            \"name\"\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Update Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"updateStudent\",\r\n    \"payload\": {\r\n        \"id\": \"38\",\r\n        \"name\": \"New Name\",\r\n        \"gradeLevel\": \"New gradeLevel\",\r\n        \"schoolId\": \"1\",\r\n        \"teacherId\": \"5\"\r\n    },\r\n    \"responseAttributes\": [\r\n        \"name\",\r\n        \"id\",\r\n        \"gradeLevel\",\r\n        \"teacher\",\r\n        [\r\n            \"name\"\r\n        ],\r\n        \"school\",\r\n        [\r\n            \"id\",\r\n            \"name\"\r\n        ]\r\n    ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JSON - Delete Student",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"type\": \"mutation\",\r\n    \"queryName\": \"deleteStudent\",\r\n    \"payload\": {\r\n        \"id\": \"38\"\r\n    },\r\n    \"responseAttributes\": []\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/json",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"json"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
