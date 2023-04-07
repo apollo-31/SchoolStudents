@@ -1,0 +1,42 @@
+type Query {
+	firstQuery : String
+	secondQuery : String
+	fullName(sampleRequest : SampleRequest) : String
+	teacher(id : Long) : TeacherResponse
+	student(id : Long) : StudentResponse
+	school(id : Long) : SchoolResponse
+}
+
+input SampleRequest {
+	firstName : String!
+	lastName : String
+}
+
+type TeacherResponse {
+	id : Long
+	firstName : String
+	lastName : String
+	studentList : [StudentResponse]
+}
+
+type StudentResponse {
+	id : Long
+	firstName : String
+	lastName : String
+	subjectList : [SubjectResponse]
+}
+
+type SchoolResponse {
+   id : Long
+   schoolName : String
+   street : String
+   city : String
+   teacherList : [TeacherResponse]
+   studentList : [StudentResponse]
+}
+
+type SubjectResponse {
+  id : Long
+  subjectName : String
+  grades : Float
+  }

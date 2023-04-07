@@ -1,0 +1,14 @@
+type Mutation {
+	createStudent(createStudentRequest : CreateStudentRequest) : StudentResponse
+}
+
+input CreateStudentRequest {
+	firstName : String
+	lastName : String
+	subjectList : [CreateSubjectRequest]
+}
+
+input CreateSubjectRequest {
+	subjectName : String
+	grades : Float
+}
